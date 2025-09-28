@@ -3,111 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X Academy - دورات Excel و Power BI الاحترافية</title>
+    <title>X Academy - مستقبل التعلم المهني</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- القسم الرئيسي -->
-    <header class="hero-section">
-        <div class="hero-overlay">
-            <div class="container">
-                <h1>طوّر مهاراتك، ارتقِ بمسيرتك المهنية مع X Academy</h1>
-                <p>دورات متخصصة في Excel و Power BI تفتح لك أبواب الفرص</p>
-                <a href="#courses" class="cta-btn">اكتشف دوراتنا</a>
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">X Academy</span>
+                <div class="logo-dot"></div>
             </div>
-        </div>
-    </header>
-
-    <!-- قسم الدورات -->
-    <section id="courses" class="courses-section">
-        <div class="container">
-            <h2>دوراتنا الاحترافية</h2>
-            <div class="courses-grid">
-                <!-- بطاقة Excel -->
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-table"></i>
-                    </div>
-                    <h3>دورة Excel المتقدمة</h3>
-                    <p>احترف تحليل البيانات وعمل التقارير الاحترافية</p>
-                    <button class="details-btn" data-course="excel">عرض التفاصيل</button>
-                </div>
-
-                <!-- بطاقة Power BI -->
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>دورة Power BI</h3>
-                    <p>حوّل البيانات إلى رؤى مرئية مؤثرة</p>
-                    <button class="details-btn" data-course="powerbi">عرض التفاصيل</button>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#courses" class="nav-link">الدورات</a></li>
+                <li><a href="#instructor" class="nav-link">المدرب</a></li>
+                <li><a href="#registration" class="nav-link">التسجيل</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- قسم المدرب -->
-    <section class="instructor-section">
-        <div class="container">
-            <h2>تعرّف على المدرب</h2>
-            <div class="instructor-content">
-                <div class="instructor-image">
-                    <img src="https://voxoura.com/media/user_images/Basel_Ghanem.jpg" alt="باسل غانم">
-                </div>
-                <div class="instructor-info">
-                    <h3>باسل غانم | Basel Ghanem</h3>
-                    <p>مدرب محترف ومعتمد من مايكروسوفت بخبرة واسعة في تدريب برامج Office المتقدمة</p>
-                    <a href="https://www.linkedin.com/in/baselghanem/" target="_blank" class="linkedin-btn">
-                        <i class="fab fa-linkedin"></i> عرض الملف الشخصي على LinkedIn
+    <!-- Hero Section with Particle Background -->
+    <section id="hero" class="hero-section">
+        <div class="particles-container" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">مستقبل التعلم</span>
+                    <span class="title-line accent">يبدأ من هنا</span>
+                </h1>
+                <p class="hero-description">احترف تحليل البيانات مع دورات Excel و Power BI المتقدمة وارتقِ بمسيرتك المهنية</p>
+                <div class="hero-actions">
+                    <a href="#courses" class="cta-btn primary">
+                        <span>اكتشف دوراتنا</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="#registration" class="cta-btn secondary">
+                        <span>سجل الآن</span>
                     </a>
                 </div>
             </div>
+            <div class="hero-visual">
+                <div class="floating-card excel">
+                    <div class="card-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>Excel</h3>
+                </div>
+                <div class="floating-card powerbi">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Power BI</h3>
+                </div>
+                <div class="hero-orb"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>مرر للأسفل</span>
         </div>
     </section>
 
-    <!-- قسم خطوات التسجيل -->
-    <section class="registration-section">
-        <div class="container">
-            <h2>خطوات بسيطة لبدء رحلتك</h2>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>تعبئة النموذج</h3>
-                    <p>املأ نموذج التسجيل عبر الرابط التالي</p>
-                    <a href="https://forms.office.com/" target="_blank" class="step-btn">املأ نموذج التسجيل الآن</a>
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <div class="section-header">
+            <h2 class="section-title">دوراتنا الاحترافية</h2>
+            <p class="section-subtitle">صممت دوراتنا لتواكب أحدث متطلبات سوق العمل</p>
+        </div>
+        <div class="courses-container">
+            <div class="course-card" data-course="excel">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <div class="card-badge">الأكثر طلباً</div>
                 </div>
-                
-                <div class="step-arrow">
-                    <i class="fas fa-arrow-left"></i>
+                <div class="card-content">
+                    <h3>دورة Excel المتقدمة</h3>
+                    <p>احترف تحليل البيانات وعمل التقارير الاحترافية باستخدام أحدث تقنيات Excel</p>
+                    <ul class="card-features">
+                        <li>18 ساعة تدريبية</li>
+                        <li>شهادة معتمدة</li>
+                        <li>تسجيلات مدى الحياة</li>
+                    </ul>
                 </div>
+                <div class="card-footer">
+                    <button class="details-btn" data-course="excel">
+                        <span>عرض التفاصيل</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+                <div class="card-glow"></div>
+            </div>
 
-                <div class="step">
+            <div class="course-card" data-course="powerbi">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="card-badge">تكنولوجيا المستقبل</div>
+                </div>
+                <div class="card-content">
+                    <h3>دورة Power BI</h3>
+                    <p>حوّل البيانات إلى رؤى مرئية مؤثرة باستخدام أقوى أدوات التحليل</p>
+                    <ul class="card-features">
+                        <li>7 وحدات متكاملة</li>
+                        <li>مشاريع عملية</li>
+                        <li>دعم مباشر</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="details-btn" data-course="powerbi">
+                        <span>عرض التفاصيل</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+                <div class="card-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section id="instructor" class="instructor-section">
+        <div class="section-header">
+            <h2 class="section-title">تعرّف على المدرب</h2>
+            <p class="section-subtitle">خبرة عملية تثري تجربة التعلم</p>
+        </div>
+        <div class="instructor-container">
+            <div class="instructor-visual">
+                <div class="instructor-image">
+                    <img src="https://voxoura.com/media/user_images/Basel_Ghanem.jpg" alt="باسل غانم">
+                    <div class="image-frame"></div>
+                </div>
+                <div class="instructor-orb"></div>
+            </div>
+            <div class="instructor-info">
+                <h3>باسل غانم | Basel Ghanem</h3>
+                <p class="instructor-bio">مدرب محترف ومعتمد من مايكروسوفت بخبرة واسعة في تدريب برامج Office المتقدمة. يتميز بأسلوب تدريب تفاعلي يجمع بين الجانب النظري والعملي لضمان تحقيق أقصى استفادة.</p>
+                <div class="instructor-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">متدرب</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">سنوات خبرة</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">رضا العملاء</span>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/baselghanem/" target="_blank" class="linkedin-btn">
+                    <i class="fab fa-linkedin"></i>
+                    <span>عرض الملف الشخصي على LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="registration-section">
+        <div class="section-header">
+            <h2 class="section-title">ابدأ رحلتك الآن</h2>
+            <p class="section-subtitle">خطوات بسيطة تفصلك عن مستقبل مهني أفضل</p>
+        </div>
+        <div class="registration-steps">
+            <div class="step-tracker">
+                <div class="step-line"></div>
+                <div class="step-dot active" data-step="1"></div>
+                <div class="step-dot" data-step="2"></div>
+                <div class="step-dot" data-step="3"></div>
+            </div>
+            <div class="steps-container">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>تعبئة النموذج</h3>
+                        <p>املأ نموذج التسجيل عبر الرابط التالي</p>
+                        <a href="https://forms.office.com/" target="_blank" class="step-btn">
+                            <span>املأ نموذج التسجيل الآن</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="step" data-step="2">
                     <div class="step-number">2</div>
-                    <h3>تأكيد الدفع</h3>
-                    <p>قم بالتحويل عبر الخدمات التالية:</p>
-                    <div class="payment-info">
-                        <p><strong>IBAN:</strong> 333759854782</p>
-                        <p><strong>CliQ:</strong> XAcademy (Etihad Bank)</p>
+                    <div class="step-content">
+                        <h3>تأكيد الدفع</h3>
+                        <p>قم بالتحويل عبر الخدمات التالية:</p>
+                        <div class="payment-info">
+                            <div class="payment-method">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <strong>IBAN:</strong> 333759854782
+                                </div>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <strong>CliQ:</strong> XAcademy (Etihad Bank)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>بدء التعلم</h3>
+                        <p>ستتلقى تأكيد التسجيل وبيانات الدخول للدورة عبر البريد الإلكتروني</p>
                     </div>
                 </div>
             </div>
-
-            <!-- معلومات الاتصال -->
-            <div class="contact-info">
-                <h3>لمزيد من المعلومات</h3>
-                <div class="contact-methods">
-                    <div class="contact-item">
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="contact-section">
+            <h3>تواصل معنا</h3>
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <div class="contact-icon">
                         <i class="fas fa-phone"></i>
-                        <span>من داخل الأردن: 0788458787</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-info">
+                        <span>من داخل الأردن</span>
+                        <a href="tel:0788458787">0788458787</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
                         <i class="fas fa-phone"></i>
-                        <span>من خارج الأردن: 00962798054014</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-info">
+                        <span>من خارج الأردن</span>
+                        <a href="tel:00962798054014">00962798054014</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
                         <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-info">
+                        <span>واتساب</span>
                         <a href="https://api.whatsapp.com/send?phone=962788458787" target="_blank">التواصل عبر واتساب</a>
                     </div>
                 </div>
@@ -115,99 +266,144 @@
         </div>
     </section>
 
-    <!-- التذييل -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <h3>X Academy</h3>
-                <p>© 2025 X Academy. جميع الحقوق محفوظة.</p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span>X Academy</span>
+                    <div class="logo-dot"></div>
+                </div>
+                <p>مستقبل التعلم المهني يبدأ من هنا</p>
             </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>الدورات</h4>
+                    <a href="#courses">Excel المتقدمة</a>
+                    <a href="#courses">Power BI</a>
+                </div>
+                <div class="link-group">
+                    <h4>روابط سريعة</h4>
+                    <a href="#hero">الرئيسية</a>
+                    <a href="#instructor">المدرب</a>
+                    <a href="#registration">التسجيل</a>
+                </div>
+                <div class="link-group">
+                    <h4>التواصل</h4>
+                    <a href="https://www.linkedin.com/in/baselghanem/" target="_blank">LinkedIn</a>
+                    <a href="https://api.whatsapp.com/send?phone=962788458787" target="_blank">واتساب</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 X Academy. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
-    <!-- مودال Excel -->
+    <!-- Course Modals -->
     <div id="excel-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>دورة Excel المتقدمة</h2>
-            
-            <div class="modal-tabs">
-                <button class="tab-btn active" data-tab="details">تفاصيل الدورة</button>
-                <button class="tab-btn" data-tab="topics">محاور الدورة</button>
-            </div>
-
-            <div class="tab-content active" id="details-tab">
-                <div class="course-highlights">
-                    <p>💼 تضيفي بـ CV تبعك: Excel Advanced Skills</p>
-                    <p>🚀 وتفتحي قدامك فرص جديدة بالشغل ما كنتي متوقعيتها</p>
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-content">
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-header">
+                    <h2>دورة Excel المتقدمة</h2>
+                    <div class="modal-badge">الأكثر طلباً</div>
                 </div>
                 
-                <p class="course-description">هاي الدورة مش مجرد تدريب… هي خطوة عملية رح تغيّر مستقبلك المهني.</p>
-                
-                <div class="course-info-grid">
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <span>المدة: 18 ساعة تدريبية / 9 جلسات</span>
+                <div class="modal-tabs">
+                    <button class="tab-btn active" data-tab="details">تفاصيل الدورة</button>
+                    <button class="tab-btn" data-tab="topics">محاور الدورة</button>
+                </div>
+
+                <div class="tab-content active" id="details-tab">
+                    <div class="course-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>تضيفي بـ CV تبعك: Excel Advanced Skills</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>وتفتحي قدامك فرص جديدة بالشغل ما كنتي متوقعيتها</span>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-calendar"></i>
-                        <span>الأيام: الأحد – الثلاثاء – الخميس</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <span>الوقت: 7:00 – 9:00 المساء</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>التاريخ: 02-10-2025 لـ 23-10-2025</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-video"></i>
-                        <span>مباشر عبر Microsoft Teams + تسجيلات مدى الحياة</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-tag"></i>
-                        <span>التكلفة: 70 دينار لفترة محدودة</span>
+                    
+                    <p class="course-description">هاي الدورة مش مجرد تدريب… هي خطوة عملية رح تغيّر مستقبلك المهني.</p>
+                    
+                    <div class="course-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>المدة: 18 ساعة تدريبية / 9 جلسات</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>الأيام: الأحد – الثلاثاء – الخميس</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>الوقت: 7:00 – 9:00 المساء</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>التاريخ: 02-10-2025 لـ 23-10-2025</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-video"></i>
+                            <span>مباشر عبر Microsoft Teams + تسجيلات مدى الحياة</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-tag"></i>
+                            <span>التكلفة: 70 دينار لفترة محدودة</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="tab-content" id="topics-tab">
-                <div class="topics-list">
-                    <!-- سيتم إضافة المحاور عبر JavaScript -->
+                <div class="tab-content" id="topics-tab">
+                    <div class="topics-list">
+                        <!-- سيتم إضافة المحاور عبر JavaScript -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- مودال Power BI -->
     <div id="powerbi-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>دورة Power BI</h2>
-            
-            <div class="modal-tabs">
-                <button class="tab-btn active" data-tab="overview">نظرة عامة</button>
-                <button class="tab-btn" data-tab="audience">المستفيدون</button>
-                <button class="tab-btn" data-tab="modules">المحاور</button>
-            </div>
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-content">
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-header">
+                    <h2>دورة Power BI</h2>
+                    <div class="modal-badge">تكنولوجيا المستقبل</div>
+                </div>
+                
+                <div class="modal-tabs">
+                    <button class="tab-btn active" data-tab="overview">نظرة عامة</button>
+                    <button class="tab-btn" data-tab="audience">المستفيدون</button>
+                    <button class="tab-btn" data-tab="modules">المحاور</button>
+                </div>
 
-            <div class="tab-content active" id="overview-tab">
-                <p>هذه الدورة تمكنك من تحويل البيانات الخام إلى رؤى قابلة للتنفيذ باستخدام Power BI. ستتعلم إنشاء تقارير مقنعة، وإجراء تحليل متعمق، والاستفادة من الميزات المتقدمة لاكتشاف الأنماط والاتجاهات المخفية.</p>
-            </div>
+                <div class="tab-content active" id="overview-tab">
+                    <p>هذه الدورة تمكنك من تحويل البيانات الخام إلى رؤى قابلة للتنفيذ باستخدام Power BI. ستتعلم إنشاء تقارير مقنعة، وإجراء تحليل متعمق، والاستفادة من الميزات المتقدمة لاكتشاف الأنماط والاتجاهات المخفية.</p>
+                </div>
 
-            <div class="tab-content" id="audience-tab">
-                <ul class="audience-list">
-                    <li>محللو البيانات ومنشئو التقارير</li>
-                    <li>المحترفون في مجال الأعمال الراغبون في فهم بياناتهم</li>
-                    <li>الطلاب والباحثون المهتمون بالرؤى القائمة على البيانات</li>
-                    <li>الأفراد في مجال أبحاث السوق، التحليلات الزبائنية، أو القطاعات الإنسانية</li>
-                </ul>
-            </div>
+                <div class="tab-content" id="audience-tab">
+                    <ul class="audience-list">
+                        <li>محللو البيانات ومنشئو التقارير</li>
+                        <li>المحترفون في مجال الأعمال الراغبون في فهم بياناتهم</li>
+                        <li>الطلاب والباحثون المهتمون بالرؤى القائمة على البيانات</li>
+                        <li>الأفراد في مجال أبحاث السوق، التحليلات الزبائنية، أو القطاعات الإنسانية</li>
+                    </ul>
+                </div>
 
-            <div class="tab-content" id="modules-tab">
-                <div class="modules-list">
-                    <!-- سيتم إضافة المحاور عبر JavaScript -->
+                <div class="tab-content" id="modules-tab">
+                    <div class="modules-list">
+                        <!-- سيتم إضافة المحاور عبر JavaScript -->
+                    </div>
                 </div>
             </div>
         </div>
